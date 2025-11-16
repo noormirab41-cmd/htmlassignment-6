@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 90%;
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    .gender-group, .dept-group {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+    input[type="file"] {
+      margin-top: 5px;
+    }
+    button {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Student Registration Form</h2>
+    <form action="#" method="post">
+      
+      <div class="form-group">
+        <label>Roll No.</label>
+        <input type="text" name="rollno" required>
+      </div>
+
+      <div class="form-group">
+        <label>Student Name</label>
+        <input type="text" name="firstname" placeholder="First Name" required>
+        <input type="text" name="lastname" placeholder="Last Name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Father's Name</label>
+        <input type="text" name="fathername" required>
+      </div>
+
+      <div class="form-group">
+        <label>Date of Birth</label>
+        <input type="date" name="dob" required>
+      </div>
+
+      <div class="form-group">
+        <label>Mobile No.</label>
+        <input type="text" name="mobile" placeholder="+91" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email ID</label>
+        <input type="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" required>
+      </div>
+
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="gender-group">
+          <label><input type="radio" name="gender" value="Male" required> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Department</label>
+        <div class="dept-group">
+          <label><input type="radio" name="dept" value="CSE" required> CSE</label>
+          <label><input type="radio" name="dept" value="IT"> IT</label>
+          <label><input type="radio" name="dept" value="ECE"> ECE</label>
+          <label><input type="radio" name="dept" value="Civil"> Civil</label>
+          <label><input type="radio" name="dept" value="Mech"> Mech</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Course</label>
+        <select name="course" required>
+          <option value="">-- Select Current Course --</option>
+          <option value="B.Tech">B.Tech</option>
+          <option value="M.Tech">M.Tech</option>
+          <option value="Diploma">Diploma</option>
+          <option value="PhD">PhD</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Student Photo</label>
+        <input type="file" name="photo" accept="image/*">
+      </div>
+
+      <div class="form-group">
+        <label>City</label>
+        <input type="text" name="city" required>
+      </div>
+
+      <div class="form-group">
+        <label>Address</label>
+        <input type="text" name="address" required>
+      </div>
+
+      <button type="submit">Submit</button>
+
+    </form>
+  </div>
+
+</body>
+</html>
